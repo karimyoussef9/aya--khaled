@@ -1,146 +1,150 @@
 
 import React from 'react';
-import { Team } from '../types';
 import Countdown from './Countdown';
-import { MapPin, Stethoscope, Calendar, Heart, Share2, ClipboardCheck } from 'lucide-react';
+import { MapPin, Stethoscope, Calendar, Heart, Share2, ClipboardCheck, Sparkles } from 'lucide-react';
 
-interface WeddingContentProps {
-  team: Team;
-}
-
-const WeddingContent: React.FC<WeddingContentProps> = ({ team }) => {
-  const isBrideSide = team === 'bride';
-  const accentColor = isBrideSide ? 'text-rose-600' : 'text-slate-700';
-  const bgColor = isBrideSide ? 'bg-rose-600' : 'bg-slate-700';
-  const lightBg = isBrideSide ? 'bg-rose-50' : 'bg-slate-50';
-  const borderColor = isBrideSide ? 'border-rose-200' : 'border-slate-200';
+const WeddingContent: React.FC = () => {
+  const accentColor = 'text-indigo-900';
+  const goldColor = 'text-amber-600';
+  const bgColor = 'bg-indigo-900';
+  const lightBg = 'bg-indigo-50/50';
+  const borderColor = 'border-indigo-100';
 
   const weddingDate = '2026-02-01T18:00:00';
   const locationUrl = 'https://www.google.com/maps?q=30.0799451,31.3998186&z=17&hl=en';
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 md:py-20 relative">
-      {/* Floral/Medical Decorations Background */}
-      <div className={`fixed top-0 right-0 -translate-y-1/4 translate-x-1/4 opacity-5 pointer-events-none ${accentColor}`}>
+    <div className="max-w-4xl mx-auto px-4 py-8 md:py-16 relative">
+      {/* Background Decorations */}
+      <div className={`fixed top-0 right-0 -translate-y-1/4 translate-x-1/4 opacity-5 pointer-events-none text-indigo-900`}>
         <Stethoscope size={600} strokeWidth={0.5} />
       </div>
-      <div className={`fixed bottom-0 left-0 translate-y-1/4 -translate-x-1/4 opacity-5 pointer-events-none ${accentColor}`}>
+      <div className={`fixed bottom-0 left-0 translate-y-1/4 -translate-x-1/4 opacity-5 pointer-events-none text-amber-600`}>
         <Heart size={600} strokeWidth={0.5} />
       </div>
 
-      {/* Main Card */}
-      <div className="relative z-10 bg-white/80 backdrop-blur-xl rounded-[3rem] shadow-2xl overflow-hidden border border-white/50">
-        {/* Header Image */}
-        <div className="h-64 md:h-[450px] relative overflow-hidden">
+      {/* Main Invitation Card */}
+      <div className="relative z-10 bg-white/90 backdrop-blur-2xl rounded-[3rem] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] overflow-hidden border border-white">
+        
+        {/* Cinematic Header Image */}
+        <div className="h-72 md:h-[500px] relative overflow-hidden">
           <img 
-            src={isBrideSide 
-              ? "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200" 
-              : "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200"
-            } 
-            alt="Wedding Background" 
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1600" 
+            alt="Wedding Venue Decor" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
           
-          <div className="absolute bottom-6 left-0 right-0 text-center">
-            <div className={`inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/95 shadow-xl border ${borderColor} text-xs font-bold uppercase tracking-widest ${accentColor}`}>
-              <Stethoscope size={16} />
-              A Medical Union of Hearts
-              <Heart size={16} fill="currentColor" />
+          <div className="absolute bottom-8 left-0 right-0 text-center">
+            <div className={`inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/95 shadow-xl border border-indigo-50 text-xs font-bold uppercase tracking-[0.2em] ${accentColor}`}>
+              <Sparkles size={16} className={goldColor} />
+              A Celebration of Love & Healing
+              <Sparkles size={16} className={goldColor} />
             </div>
           </div>
         </div>
 
-        {/* Content Section */}
-        <div className="px-6 py-10 md:px-16 md:py-16 text-center">
-          <h2 className="font-cursive text-4xl md:text-6xl text-neutral-800 mb-6">
+        {/* Invitation Text Section */}
+        <div className="px-6 py-12 md:px-20 md:py-20 text-center">
+          <h2 className="font-cursive text-5xl md:text-7xl text-neutral-800 mb-8">
             The Wedding of
           </h2>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 mb-10">
             <div className="flex flex-col items-center">
-               <h1 className="font-serif text-5xl md:text-7xl font-bold text-neutral-900 leading-tight">
+              <span className={`text-xs font-bold uppercase tracking-[0.3em] mb-2 ${goldColor}`}>The Bride</span>
+              <h1 className="font-serif text-5xl md:text-8xl font-black text-neutral-900 leading-none">
                 Dr. Aya
               </h1>
-              <p className="text-neutral-500 font-sans tracking-widest text-sm uppercase mt-2">The Bride</p>
             </div>
-            <div className={`text-4xl md:text-6xl font-serif italic ${accentColor} animate-pulse drop-shadow-sm`}>&</div>
+            <div className="relative flex items-center justify-center">
+              <div className={`text-5xl md:text-7xl font-serif italic ${goldColor} animate-pulse px-4`}>&</div>
+              <Stethoscope className="absolute -top-8 opacity-10 text-indigo-900" size={40} />
+            </div>
             <div className="flex flex-col items-center">
-              <h1 className="font-serif text-5xl md:text-7xl font-bold text-neutral-900 leading-tight">
+              <span className={`text-xs font-bold uppercase tracking-[0.3em] mb-2 ${goldColor}`}>The Groom</span>
+              <h1 className="font-serif text-5xl md:text-8xl font-black text-neutral-900 leading-none">
                 Dr. Khalid
               </h1>
-              <p className="text-neutral-500 font-sans tracking-widest text-sm uppercase mt-2">The Groom</p>
             </div>
           </div>
 
-          <p className="text-neutral-600 max-w-lg mx-auto mb-12 font-sans leading-relaxed text-lg">
-            Together with our families, we joyfully invite you to witness the union of two healers embarking on their life-long journey of love, health, and happiness.
+          <p className="text-neutral-500 max-w-xl mx-auto mb-16 font-sans leading-relaxed text-lg md:text-xl italic">
+            "We have spent our careers healing hearts, and now we invite you to witness the day our own two hearts become one."
           </p>
 
-          <hr className={`w-24 mx-auto mb-12 border-t-2 ${borderColor}`} />
-
-          {/* Details Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className={`p-8 rounded-[2.5rem] ${lightBg} border ${borderColor} transition-all hover:shadow-lg hover:-translate-y-1 duration-300 group`}>
-              <Calendar className={`${accentColor} mx-auto mb-4 group-hover:scale-110 transition-transform`} size={36} />
-              <h3 className="font-serif text-2xl font-bold mb-2">When</h3>
-              <p className="text-neutral-800 font-bold text-lg">Sunday, February 1st, 2026</p>
-              <p className="text-neutral-500 text-sm mt-1 uppercase tracking-tighter">Ceremony starts at 6:00 PM</p>
+          {/* Details Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-16">
+            <div className={`p-10 rounded-[2.5rem] ${lightBg} border ${borderColor} transition-all hover:shadow-2xl hover:-translate-y-2 duration-500 group relative overflow-hidden`}>
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Calendar size={80} />
+              </div>
+              <Calendar className={`${accentColor} mx-auto mb-6`} size={44} />
+              <h3 className="font-serif text-2xl font-bold mb-3 text-neutral-900">The Date</h3>
+              <p className="text-indigo-900 font-black text-xl mb-1">Sunday, Feb 1st, 2026</p>
+              <p className="text-neutral-500 font-sans tracking-widest text-sm uppercase">Ceremony at 6:00 PM</p>
             </div>
 
-            <div className={`p-8 rounded-[2.5rem] ${lightBg} border ${borderColor} transition-all hover:shadow-lg hover:-translate-y-1 duration-300 group`}>
-              <MapPin className={`${accentColor} mx-auto mb-4 group-hover:scale-110 transition-transform`} size={36} />
-              <h3 className="font-serif text-2xl font-bold mb-2">Where</h3>
-              <p className="text-neutral-800 font-bold text-lg italic">قاعة جلاديوس</p>
-              <p className="text-neutral-700 font-semibold">(Gladius Hall)</p>
-              <p className="text-neutral-500 text-sm mt-1">New Cairo, Egypt</p>
+            <div className={`p-10 rounded-[2.5rem] ${lightBg} border ${borderColor} transition-all hover:shadow-2xl hover:-translate-y-2 duration-500 group relative overflow-hidden`}>
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <MapPin size={80} />
+              </div>
+              <MapPin className={`${goldColor} mx-auto mb-6`} size={44} />
+              <h3 className="font-serif text-2xl font-bold mb-3 text-neutral-900">The Venue</h3>
+              <p className="text-indigo-900 font-black text-2xl mb-1 font-serif">قاعة جلاديوس</p>
+              <p className="text-neutral-700 font-bold">Gladius Hall</p>
+              <p className="text-neutral-500 text-sm mt-1 uppercase tracking-widest">New Cairo, Egypt</p>
             </div>
           </div>
 
-          {/* Countdown Component */}
-          <div className="mb-12 bg-neutral-50/50 p-8 rounded-[2rem] border border-neutral-100">
-            <p className="text-neutral-400 font-sans uppercase tracking-[0.3em] text-xs mb-4">Counting down to our big day</p>
+          {/* Countdown Display */}
+          <div className="mb-16 bg-neutral-50/80 p-10 rounded-[3rem] border border-neutral-100 shadow-inner">
+            <p className="text-neutral-400 font-sans uppercase tracking-[0.4em] text-xs mb-6 font-bold">Counting down the seconds</p>
             <Countdown targetDate={weddingDate} accentColor={accentColor} />
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Unified Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a 
               href={locationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-5 ${bgColor} text-white rounded-full font-bold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 active:scale-95`}
+              className={`w-full sm:w-auto flex items-center justify-center gap-3 px-12 py-6 ${bgColor} text-white rounded-full font-black shadow-[0_20px_40px_-10px_rgba(49,46,129,0.3)] hover:shadow-[0_25px_50px_-12px_rgba(49,46,129,0.4)] hover:-translate-y-1 transition-all duration-300 active:scale-95 text-lg`}
             >
-              <MapPin size={22} />
-              <span>Get Directions</span>
+              <MapPin size={24} />
+              <span>Location on Maps</span>
             </a>
             <button 
-              className={`w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-5 bg-white border-2 ${borderColor} ${accentColor} rounded-full font-bold hover:bg-neutral-50 shadow-md transition-all duration-300 active:scale-95`}
-              onClick={() => alert("Thank you! RSVP confirmed in our system. We look forward to seeing you at Gladius Hall!")}
+              className={`w-full sm:w-auto flex items-center justify-center gap-3 px-12 py-6 bg-white border-2 ${borderColor} ${accentColor} rounded-full font-black hover:bg-neutral-50 shadow-lg transition-all duration-300 active:scale-95 text-lg`}
+              onClick={() => alert("RSVP Confirmed! We look forward to celebrating with you.")}
             >
-              <ClipboardCheck size={22} />
-              <span>Confirm RSVP</span>
+              <ClipboardCheck size={24} />
+              <span>Confirm Attendance</span>
             </button>
           </div>
         </div>
 
-        {/* Footer Note */}
-        <div className={`${lightBg} p-10 text-center border-t ${borderColor}`}>
-          <p className="text-neutral-500 italic font-serif text-lg leading-relaxed">
-            "Your presence is the only gift we require as we start our new life together."
+        {/* Elegant Footer */}
+        <div className="bg-neutral-900 p-12 text-center text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10 pointer-events-none">
+            <div className="h-full w-full border-[20px] border-amber-600 m-4 rounded-[2rem]"></div>
+          </div>
+          <p className="text-amber-100 italic font-serif text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto mb-8">
+            "Your presence is our greatest honor as we begin this new chapter together."
           </p>
-          <div className="mt-6 flex justify-center gap-6 text-neutral-400">
-             <Share2 size={24} className="hover:text-neutral-600 cursor-pointer transition-colors" title="Share Invitation" />
-             <Heart size={24} className={`${accentColor} fill-current cursor-pointer transition-transform hover:scale-110`} />
+          <div className="flex justify-center items-center gap-8 text-amber-500">
+             <Share2 size={24} className="hover:text-white cursor-pointer transition-colors" />
+             <div className="h-px w-12 bg-amber-500/30"></div>
+             <Heart size={32} className="fill-current animate-pulse" />
+             <div className="h-px w-12 bg-amber-500/30"></div>
+             <Stethoscope size={24} className="hover:text-white cursor-pointer transition-colors" />
           </div>
         </div>
       </div>
 
-      {/* Team Indicator Label */}
-      <div className={`fixed bottom-6 right-6 z-50 px-6 py-3 rounded-full shadow-2xl border ${borderColor} bg-white/90 backdrop-blur-md text-sm font-bold tracking-widest uppercase flex items-center gap-3 ${accentColor}`}>
-        <div className={`w-3 h-3 rounded-full ${bgColor} animate-pulse shadow-[0_0_8px_rgba(0,0,0,0.1)]`}></div>
-        {isBrideSide ? "Team Bride Access" : "Team Groom Access"}
-      </div>
+      <p className="text-center mt-12 text-neutral-400 font-sans uppercase tracking-[0.3em] text-[10px]">
+        Designed with love for Dr. Aya & Dr. Khalid
+      </p>
     </div>
   );
 };
