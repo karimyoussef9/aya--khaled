@@ -166,6 +166,34 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .header-badge {
+        font-size: 0.5rem;
+        letter-spacing: 0.1em;
+        padding: 0.4rem 0.75rem;
+        gap: 0.4rem;
+    }
+    
+    .header-badge .icon-sparkles {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .header-badge {
+        font-size: 0.45rem;
+        letter-spacing: 0.08em;
+        padding: 0.35rem 0.6rem;
+        gap: 0.3rem;
+    }
+    
+    .header-badge .icon-sparkles {
+        width: 10px;
+        height: 10px;
+    }
+}
+
 .icon-sparkles {
     color: var(--amber-600);
 }
