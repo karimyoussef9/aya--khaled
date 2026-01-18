@@ -1,44 +1,206 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Khalid & Dr. Aya Wedding</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            overflow-x: hidden;
-        }
-        .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-        .font-cursive {
-            font-family: 'Great Vibes', cursive;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-    </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;600;900&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-neutral-50 text-neutral-800">
-    <div id="root"></div>
+<body>
+    <div class="min-h-screen bg-neutral-50 transition-colors duration-1000">
+        <div class="max-w-4xl mx-auto px-4 py-8 responsive-py relative">
+            <!-- Background Decorations -->
+            <div class="bg-decoration bg-decoration-1">
+                <svg width="600" height="600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                    <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"></path>
+                    <path d="m6 12 2 2 6-6"></path>
+                </svg>
+            </div>
+            <div class="bg-decoration bg-decoration-2">
+                <svg width="600" height="600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"></path>
+                </svg>
+            </div>
+
+            <!-- Main Invitation Card -->
+            <div class="card-main">
+                <!-- Cinematic Header Image -->
+                <div class="header-image">
+                    <img 
+                        src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1600" 
+                        alt="Wedding Venue Decor" 
+                    />
+                    <div class="header-gradient"></div>
+                    
+                    <div class="header-badge">
+                        <svg class="icon-sparkles" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                        </svg>
+                        A Celebration of Love & Healing
+                        <svg class="icon-sparkles" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Invitation Text Section -->
+                <div class="content-section">
+                    <h2 class="font-cursive heading-main">
+                        The Wedding of
+                    </h2>
+                    
+                    <div class="names-container">
+                        <div class="name-block">
+                            <span class="name-label">The Bride</span>
+                            <h1 class="name-text">Dr. Aya</h1>
+                        </div>
+                        <div class="name-separator">
+                            <div class="ampersand">&</div>
+                            <svg class="stethoscope-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                                <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"></path>
+                                <path d="m6 12 2 2 6-6"></path>
+                            </svg>
+                        </div>
+                        <div class="name-block">
+                            <span class="name-label">The Groom</span>
+                            <h1 class="name-text">Dr. Khalid</h1>
+                        </div>
+                    </div>
+
+                    <p class="quote-text">
+                        "We have spent our careers healing hearts, and now we invite you to witness the day our own two hearts become one."
+                    </p>
+
+                    <!-- Details Section -->
+                    <div class="details-grid">
+                        <div class="detail-card detail-card-hover">
+                            <div class="detail-icon-bg">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                            </div>
+                            <svg class="detail-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <h3 class="detail-title">The Date</h3>
+                            <p class="detail-main-text">Sunday, Feb 1st, 2026</p>
+                            <p class="detail-sub-text">Ceremony at 6:00 PM</p>
+                        </div>
+
+                        <div class="detail-card detail-card-hover">
+                            <div class="detail-icon-bg">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <svg class="detail-icon detail-icon-gold" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <h3 class="detail-title">The Venue</h3>
+                            <p class="detail-main-text venue-arabic">قاعة جلاديوس</p>
+                            <p class="detail-venue-name">Gladius Hall</p>
+                            <p class="detail-sub-text">New Cairo, Egypt</p>
+                        </div>
+                    </div>
+
+                    <!-- Countdown Display -->
+                    <div class="countdown-container">
+                        <p class="countdown-label">Counting down the seconds</p>
+                        <div id="countdown" class="countdown-display">
+                            <div class="timer-box">
+                                <span class="timer-value" id="days">00</span>
+                                <span class="timer-label">Days</span>
+                            </div>
+                            <div class="timer-box">
+                                <span class="timer-value" id="hours">00</span>
+                                <span class="timer-label">Hours</span>
+                            </div>
+                            <div class="timer-box">
+                                <span class="timer-value" id="minutes">00</span>
+                                <span class="timer-label">Mins</span>
+                            </div>
+                            <div class="timer-box">
+                                <span class="timer-value" id="seconds">00</span>
+                                <span class="timer-label">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unified Action Buttons -->
+                    <div class="action-buttons">
+                        <a 
+                            href="https://www.google.com/maps?q=30.0799451,31.3998186&z=17&hl=en"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-primary"
+                        >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Location on Maps</span>
+                        </a>
+                        <button id="rsvpBtn" class="btn btn-secondary">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                <path d="m9 14 2 2 4-4"></path>
+                            </svg>
+                            <span>Confirm Attendance</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Elegant Footer -->
+                <div class="footer">
+                    <div class="footer-border"></div>
+                    <p class="footer-text">
+                        "Your presence is our greatest honor as we begin this new chapter together."
+                    </p>
+                    <div class="footer-icons">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                        <div class="footer-divider"></div>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="footer-icon footer-heart">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"></path>
+                        </svg>
+                        <div class="footer-divider"></div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon">
+                            <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                            <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"></path>
+                            <path d="m6 12 2 2 6-6"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer-credit">
+                Designed with love for Dr. Aya & Dr. Khalid
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
